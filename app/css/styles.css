@@ -1,2 +1,11 @@
-.testing {
-  width: 71.42857%; }
+body {
+  background: rgba(243, 217, 42, 0.4);
+  font-family: 'Lato', sans-serif; }
+
+.home img {
+  display: block;
+  margin: 0 auto;
+  opacity: 1; }
+
+.home .text-center {
+  text-align: center; }

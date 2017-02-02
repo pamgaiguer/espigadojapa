@@ -1,3 +1,16 @@
-.testing {
-  width: percentage(5/7);
+body{
+  //background-color: #F3D92A;
+  background: rgba(243,217,42, 0.4);
+  font-family: 'Lato', sans-serif;
+}
+
+.home {
+  img{
+    display: block;
+    margin: 0 auto;
+    opacity: 1;
+  }
+  .text-center{
+    text-align: center;
+  }
 }
