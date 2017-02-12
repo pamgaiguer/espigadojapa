@@ -25,3 +25,19 @@
 	background-size: cover;
 }
 
+$max: 72;
+$step: 4;
+
+@for $size from 0 through ceil($max/$step) {
+  .mb-#{$size*$step} { margin-bottom: #{$size*$step}px; }
+  .mr-#{$size*$step} { margin-right: #{$size*$step}px; }
+  .ml-#{$size*$step} { margin-left: #{$size*$step}px; }
+  .mt-#{$size*$step} { margin-top: #{$size*$step}px; }
+}
+
+@for $size from 0 through ceil($max/$step) {
+  .pb-#{$size*$step} { padding-bottom: #{$size*$step}px; }
+  .pr-#{$size*$step} { padding-right: #{$size*$step}px; }
+  .pl-#{$size*$step} { padding-left: #{$size*$step}px; }
+  .pt-#{$size*$step} { padding-top: #{$size*$step}px; }
+}

@@ -262,7 +262,7 @@ input[type=checkbox], input[type=radio] {
     }
     .navbar-scroll {
       padding:5px 0;
-      background:rgba($green-main,0.95);
+      background:rgba(black,0.7);
       height: 120px;
     }
   }
@@ -1205,7 +1205,7 @@ ul#portfolio-filter .no-padd img {
   ====================================================*/
 
   #footer {
-    background:rgba(0,0,0,0.7);
+    background:rgba($green-main,0.7);
     text-align:center;
     padding:20px 0;
   }
@@ -1256,7 +1256,7 @@ ul#portfolio-filter .no-padd img {
     position:absolute;
     left:50%; /* centers the loading animation horizontally one the screen */
     top:50%; /* centers the loading animation vertically one the screen */
-    background-image:url(../img/loading.gif); /* path to your loading animation */
+    background-image:url(../images/loading.gif); /* path to your loading animation */
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
