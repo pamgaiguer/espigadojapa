@@ -1,0 +1,27 @@
+//mixins
+
+@mixin sans-serif () {
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+	border-radius:  	   $radius;
+}
+
+@mixin transition-all($transition){
+	-webkit-transition:$transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	transition: $transition;
+}
+
+@mixin background-cover() {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
