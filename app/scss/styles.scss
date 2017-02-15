@@ -24,6 +24,59 @@ h1,h2,h3,h4,h5,h6 {
   font-weight:700;
 }
 
+p{
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 2.5;
+  color: $blue-main;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+figcaption{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 2;
+  color: $blue-main;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+}
+
+.list-blue{
+  li{
+    color: $blue-main;
+  }
+}
+
+.blue-text{
+  color: $blue-main;
+  text-shadow: 0 1px 0 rgba(255,255,255,1);
+
+}
+
+#itinerario, #sambaenredo{
+  p{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  h5{
+    color: $blue-main;
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+
+  }
+  h4{
+    font-weight: 700;
+    font-size: 28px;
+    color: $blue-main;
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+  }
+  ul {
+    li{
+      font-size: 18px;
+      text-shadow: 0 1px 0 rgba(255,255,255,1);
+
+    }
+  }
+}
+
 .form-control {
   color: $body-text-color;
   height: 45px;
@@ -185,17 +238,21 @@ input[type=checkbox], input[type=radio] {
 
   .section-heading {
     text-align:center;
+    margin-top: 30px;
     padding: 40px 0;
     h2 {
       margin:0;
-      font-size: 36px;
-      letter-spacing: -1px;
+      font-size: 42px;
+      letter-spacing: 2px;
       text-transform:uppercase;
+      color: white;
+      font-weight: 900;
+      text-shadow: 3px 3px 0 #0069B4, -1px -1px 0 #0069B4, 1px -1px 0 #0069B4, -1px 1px 0 #0069B4, 1px 1px 0 #0069B4;
     }
     .separator {
       width: 30px;
       height: 4px;
-      background: $body-text-color;
+      background: #0069B4;
       text-align: center;
       display: inline-block;
     }
@@ -216,20 +273,24 @@ input[type=checkbox], input[type=radio] {
   ====================================================*/
 
   .navbar-brand {
+    padding: 5px 5px;
+    height: 70px;
     img {
-      width:120px;
+      //width:120px;
     }
   }
-
+  .navbar-nav > li > a {
+    line-height: 45px;
+  }
 
   .navbar-inverse {
     @include transition-all(all .5s ease-in-out);
-    background:rgba($green-main,0.7);
+    background:rgba(black,0.7);
 
     .navbar-nav {
       li {
         a {
-          color:$body-text-color;
+          color: white;
           &:hover, &.active {
             font-weight:bold;
             background:transparent;
@@ -240,7 +301,7 @@ input[type=checkbox], input[type=radio] {
   }
 
   .navbar-nav > li > a {
-    line-height: 75px;
+    //line-height: 75px;
   }
 
   @media (min-width:1200px) {
@@ -263,7 +324,18 @@ input[type=checkbox], input[type=radio] {
     .navbar-scroll {
       padding:5px 0;
       background:rgba(black,0.7);
-      height: 120px;
+
+      li {
+        a {
+          color:$body-text-color;
+          &:hover, &.active {
+            font-weight:bold;
+            background:transparent;
+          }
+        }
+      }
+
+
     }
   }
 
@@ -512,7 +584,14 @@ input[type=checkbox], input[type=radio] {
     text-align:center;
     cursor:default;
     margin:15px 0;
-    border:2px solid $body-text-color;
+    //border:2px solid $green-main;
+
+    ul{
+      li{
+        color: $blue-main;
+      }
+    }
+
     .overlay {
       width:100%;
       height:100%;
@@ -522,7 +601,7 @@ input[type=checkbox], input[type=radio] {
       left:0;
       opacity:0;
       background-color:$dark-transparent-hover;
-      @include transition-all(all .4s ease-in-out);
+      //@include transition-all(all .4s ease-in-out);
     }
     img {
       display:block;
@@ -570,9 +649,9 @@ input[type=checkbox], input[type=radio] {
         filter:alpha(opacity=100);
       }
       img {
-        -ms-transform:scale(1.2);
-        -webkit-transform:scale(1.2);
-        transform:scale(1.2)
+        // -ms-transform:scale(1.2);
+        // -webkit-transform:scale(1.2);
+        // transform:scale(1.2)
       }
       h2, a.info {
         opacity:1;
@@ -647,65 +726,6 @@ ul#portfolio-filter li {
 
 ul#portfolio-filter a {  }
 ul#portfolio-filter a:hover { text-decoration: none; }
-
-/*
-ul#portfolio-filter img { margin:15px 0; }
-
-ul#portfolio-filter h4 {
-  margin-bottom:0px;
-}
-
-
-ul#portfolio-filter .item-wrapper {
-      position: relative;
-    text-align: center;
-}
-
-
-
-ul#portfolio-filter .item-wrapper .overlay{
-  position: absolute;
-    text-align: center;
-    width: 100%;
-    padding: 20px;
-    background-color: rgba(0,0,0,0.7);
-  color:$body-text-color;
-  @include transition-all(all .3s ease-in-out);
-  bottom:0;
-    background: url(../img/trans-dot.png) repeat top left;
-   h4 {
-    color:$body-text-color;
-   }
-}
-
-
-
-
-ul#portfolio-filter .item-wrapper:hover .overlay {
-  @include transition-all(all .3s ease-in-out);
-  background: url(../img/trans-dot.png) repeat top left;
-
-}
-
-
-ul#portfolio-filter .info {
-  text-align:center;
-}
-
-
-ul#portfolio-filter .no-padd img {
-  margin:0;
-}
-
-*/
-
-
-
-
-
-
-
-
 
 /* ==================================================
   team
